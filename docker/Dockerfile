@@ -12,7 +12,7 @@ WORKDIR /opt/app
 COPY . .
 RUN yarn build
 
-# Creating final production image
+# Creating final production image -
 FROM node:18-alpine
 RUN apk add --no-cache vips-dev
 ARG NODE_ENV=production
