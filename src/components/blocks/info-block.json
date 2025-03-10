@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blocks_info_blocks",
+  "info": {
+    "displayName": "Info Block"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "headline": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "turquoise",
+        "orange",
+        "brown"
+      ]
+    }
+  }
+}
