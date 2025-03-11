@@ -10,8 +10,6 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link', false>;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files'>;
-    logo: Schema.Attribute.Component<'elements.logo', false>;
-    theme: Schema.Attribute.Enumeration<['turquoise', 'orange', 'brown']>;
   };
 }
 
