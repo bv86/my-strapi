@@ -15,8 +15,8 @@
         "files"
       ]
     },
-    "heading": {
-      "type": "string"
+    "title": {
+      "type": "text"
     },
     "cta": {
       "type": "component",

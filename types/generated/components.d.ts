@@ -8,22 +8,22 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
-    heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.Text;
   };
 }
 
 export interface BlocksInfoBlock extends Struct.ComponentSchema {
   collectionName: 'components_blocks_info_blocks';
   info: {
+    description: '';
     displayName: 'Info Block';
   };
   attributes: {
     content: Schema.Attribute.RichText;
     cta: Schema.Attribute.Component<'elements.link', false>;
-    headline: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files'>;
-    theme: Schema.Attribute.Enumeration<['turquoise', 'orange', 'brown']>;
+    title: Schema.Attribute.String;
   };
 }
 
