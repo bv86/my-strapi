@@ -50,6 +50,29 @@ export interface ElementsLogo extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutsFooter extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    copyright: Schema.Attribute.String;
+    socials: Schema.Attribute.Component<'elements.link', true>;
+  };
+}
+
+export interface LayoutsHeader extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_headers';
+  info: {
+    description: '';
+    displayName: 'Header';
+  };
+  attributes: {
+    logo: Schema.Attribute.Component<'elements.logo', false>;
+    navigation: Schema.Attribute.Component<'elements.link', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -57,6 +80,8 @@ declare module '@strapi/strapi' {
       'blocks.info-block': BlocksInfoBlock;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;
+      'layouts.footer': LayoutsFooter;
+      'layouts.header': LayoutsHeader;
     }
   }
 }
